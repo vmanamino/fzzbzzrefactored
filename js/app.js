@@ -18,9 +18,10 @@
 $(document).ready(function() {
    $("#target").submit(function(event){
       event.preventDefault();
-      var input = $('.target input').val();
-      input  +input;
-      $('.target input').val("");
+      $('.target').empty();
+      var input = $('#target input').val();
+      input = +input;
+      $('#target input').val("");
       if (parseInt(input)) {
           for (var count = 1; count <= input; count++) {
               if ( count % 3 == 0 && count % 5 == 0 ) {
